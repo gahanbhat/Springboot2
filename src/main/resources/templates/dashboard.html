@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <h2>Welcome, <span th:text="${username}"></span>!</h2>
+    <p>You are logged in via Keycloak.</p>
+    <form th:action="@{/logout}" method="post">
+      <input type="submit" value="Logout" />
+    </form>
+  </body>
+</html>

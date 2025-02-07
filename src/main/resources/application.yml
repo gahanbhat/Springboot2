@@ -1,5 +1,5 @@
 server:
-  port: 8082
+  port: 8081
 
 spring:
   application:
@@ -9,10 +9,10 @@ spring:
       client:
         registration:
           keycloak:
-            client-id: food-ordering-client
-            client-secret: IQshnNg9E0NPLTZ0RzmkCYe7hkqEADqq
+            client-id: dashboard-client
+            client-secret: Zf5ShUp3ODannTX0c4yGpPQR4WGqGUAx
             scope: openid,profile,email
-            redirect-uri: http://localhost:8082/login/oauth2/code/keycloak
+            redirect-uri: http://localhost:8081/login/oauth2/code/keycloak
         provider:
           keycloak:
             issuer-uri: http://localhost:8080/realms/food-ordering-realm

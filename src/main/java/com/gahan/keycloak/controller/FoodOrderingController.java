@@ -29,13 +29,15 @@ public class FoodOrderingController {
      * @param model Model object for passing data to the view
      * @return the name of the view to render for the menu page, or redirects to home if user is not authenticated
      */
-    @GetMapping("/menu")
-    public String menu(@AuthenticationPrincipal OidcUser user, Model model) {
+    @GetMapping("/dashboard")
+    public String dashboard(@AuthenticationPrincipal OidcUser user, Model model) {
         if (user != null) {
             model.addAttribute("username", user.getPreferredUsername());
         } else {
             return "redirect:/";  // Redirect to home if not authenticated
         }
-        return "menu";
+        return "dashboard";
     }
+
+
 }
